@@ -12,6 +12,13 @@ H1 {
   font-weight: 600;
 }
 
+.title {
+  color: white;
+  text-align: center;
+  margin-bottom: 4rem;
+  font-size: 3rem;
+}
+
 .container {
   width: 80%;
   background-color: var(--white);
