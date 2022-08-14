@@ -1,40 +1,37 @@
 
-
 html {
   box-sizing: border-box;
-  /* font-size: 62.5%; */
+  font-size: 62.5%;
   /* 10px/16 px = 0.626= 62.5%; do not set a fix font-size, use % instead. *Percentage of user's browser font-size setting */
-  background-color:  var(--dark);
+  background-color: var(--blue);
 }
 
 
 H1 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-}
-H2 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 600;
 }
 
 .container {
   width: 80%;
-  background-color: var(--light);
-  margin: 8px auto;
-  padding: 12px;
+  background-color: var(--white);
+  margin: 0.8rem auto;
+  padding: 1.2rem;
 
 }
-/*  */
 
 /* Variables */
 :root {
-	--primary: #EA40A4;
-	--business: #3a82ee;
+	--primary: #ff0000;
+	--business: #2045CA;
 	--personal: var(--primary);
 	--light: #EEE;
 	--grey: #888;
-	--dark: #313154;
+  --grey-slate: #8C8CA1;
+  --dark-grey: #484848;
+	--blue: #2045CA;
 	--danger: #ff5b57;
+  --white: #FFFFFF;
 
 	--shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
@@ -48,7 +45,7 @@ H2 {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Lora', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 input:not([type="radio"]):not([type="checkbox"]), button {
@@ -59,73 +56,87 @@ input:not([type="radio"]):not([type="checkbox"]), button {
 	cursor: initial;
 }
 
-/* end of Resets */
+/* End of Resets */
 
 
 /* General components */
 body {
-	/* background: var(--light); */
-	color: var(--dark);
+	color: var(--dark-grey);
 }
 
 section {
-	margin-top: 2rem;
-	margin-bottom: 2rem;
-	padding-left: 1.5rem;
-	padding-right: 1.5rem;
+	margin-top: 3.2rem;
+	margin-bottom: 3.2rem;
+	padding-left: 2.4rem;
+	padding-right: 2.4rem;
+}
+
+H2 {
+	color: var(--dark-grey);
+	font-size: 1.8rem;
+	font-weight: 400;
 }
 
 h3 {
-	color: var(--dark);
-	font-size: 1rem;
-	font-weight: 400;
-	margin-bottom: 0.5rem;
+	color: var(--grey-slate);
+	font-size: 1.4rem;
+	font-weight: 500;
+	margin-bottom: 0.8rem;
 }
 
-h4 {
-	color: var(--grey);
-	font-size: 0.875rem;
-	font-weight: 700;
-	margin-bottom: 0.5rem;
+.app {
+  margin-top: 6rem;
 }
 
+hr {
+  border: 0.5px solid rgba(10, 63, 254, 0.4);
+  margin-bottom: 2rem;
+}
 
-/* Sth else */
-
+/* FORM */
 .greeting .title {
   display: flex;
 }
 
 .greeting .title input {
-  margin-left: 0.5rem;
+  margin-left: 0.8rem;
   flex: 1 1 0%;
   min-width: 0;
 }
 
 .greeting .title,
 .greeting .title input {
-  color: var(--dark);
-  font-size: 1.5rem;
+  color: var(--dark-grey);
+  font-size: 2.4rem;
   font-weight: 700;
 }
 
+.create-todo {
+  margin-bottom: 6rem;
+}
 .create-todo input[type="text"]{
 display: block;
 width: 100%;
-font-size: 1.125rem;
-padding: 1rem 1.5rem;
-color: var(--dark);
+font-size: 1.4rem;
+padding: 1.6rem 2.4rem;
+color: var(--dark-grey);
 background-color: #fff;
-border-radius: 0.5rem;
+border-radius: 8px;
 box-shadow: var(--shadow);
-margin-bottom: 1.5rem;
+margin-bottom: 2.4rem;
 }
+
+input::placeholder {
+  font-size: 1.4rem;
+  color: #8C8CA1;
+}
+
 
 .create-todo .options {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	grid-gap: 1rem;
-	margin-bottom: 1.5rem;
+	grid-gap: 1.6rem;
+	margin-bottom: 2.4rem;
 }
 
 .create-todo .options label {
@@ -134,9 +145,9 @@ margin-bottom: 1.5rem;
 	align-items: center;
 	justify-content: center;
 	background-color: #FFF;
-	padding: 1.5rem;
+	padding: 2.4rem;
 	box-shadow: var(--shadow);
-	border-radius: 0.5rem;
+	border-radius: 8px;
 	cursor: pointer;
 }
 
@@ -149,8 +160,8 @@ input[type="checkbox"] {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 20px;
-	height: 20px;
+	width: 2rem;
+	height: 2em;
 	border-radius: 999px;
 	border: 2px solid var(--business);
 	box-shadow: var(--business-glow);
@@ -179,29 +190,29 @@ input[type="checkbox"] {
 }
 
 input:checked ~ .bubble::after {
-	width: 10px;
-	height: 10px;
+	width: 1rem;
+	height: 1rem;
 	opacity: 1;
 }
 /* ~means "if it's next to */
 
 .create-todo .options label div {
-	color: var(--dark);
-	font-size: 1.125rem;
-	margin-top: 1rem;
+	color: var(--dark-grey);
+	font-size: 1.8rem;
+	margin-top: 1.6rem;
 }
 
 .create-todo input[type="submit"] {
 	display: block;
 	width: 100%;
-	font-size: 1.125rem;
-	padding: 1rem 1.5rem;
+	font-size: 1.8rem;
+	padding: 1.6rem 2.4rem;
 	color: #FFF;
 	font-weight: 700;
 	text-transform: uppercase;
-	background-color: var(--primary);
-	box-shadow: var(--personal-glow);
-	border-radius: 0.5rem;
+	background-color: var(--blue);
+	box-shadow: var(--business-glow);
+	border-radius: 8px;
 	cursor: pointer;
 	transition: 0.2s ease-out;
 }
@@ -211,22 +222,22 @@ input:checked ~ .bubble::after {
 }
 
 .todo-list .list {
-	margin: 1rem 0;
+	margin: 1.6rem 0;
 }
 
 .todo-list .todo-item {
 	display: flex;
 	align-items: center;
 	background-color: #FFF;
-	padding: 1rem;
-	border-radius: 0.5rem;
+	padding: 1.6rem;
+	border-radius: 8px;
 	box-shadow: var(--shadow);
-	margin-bottom: 1rem;
+	margin-bottom: 1.6rem;
 }
 
 .todo-item label {
 	display: block;
-	margin-right: 1rem;
+	margin-right: 1.6rem;
 	cursor: pointer;
 }
 
@@ -235,8 +246,8 @@ input:checked ~ .bubble::after {
 }
 
 .todo-item .todo-content input {
-	color: var(--dark);
-	font-size: 1.125rem;
+	color: var(--dark-grey);
+	font-size: 1.8rem;
 }
 
 .todo-item .actions {
@@ -246,8 +257,8 @@ input:checked ~ .bubble::after {
 
 .todo-item .actions button {
 	display: block;
-	padding: 0.5rem;
-	border-radius: 0.25rem;
+	padding: 0.8rem;
+	border-radius: 4px;
 	color: #FFF;
 	cursor: pointer;
 	transition: 0.2s ease-in-out;
@@ -258,12 +269,12 @@ input:checked ~ .bubble::after {
 }
 
 .todo-item .actions .edit {
-	margin-right: 0.5rem;
-	background-color: var(--primary);
+	margin-right: 0.8rem;
+	background-color: var(--grey-slate);
 }
 
 .todo-item .actions .delete {
-	background-color: var(--danger);
+	background-color: var(--primary);
 }
 
 .todo-item.done .todo-content input {
