@@ -3,7 +3,7 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
   /* 10px/16 px = 0.626= 62.5%; do not set a fix font-size, use % instead. *Percentage of user's browser font-size setting */
-  background-color: var(--blue);
+  background-color: var(--grey);
 }
 
 
