@@ -3,7 +3,7 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
   /* 10px/16 px = 0.626= 62.5%; do not set a fix font-size, use % instead. *Percentage of user's browser font-size setting */
-  background-color: var(--grey);
+  background-color: #F0A962;
 }
 
 
@@ -42,7 +42,7 @@ input[type="text"]:first-of-type {
   --grey-slate: #8C8CA1;
   --dark-grey: #484848;
 	--blue: #2045CA;
-	--danger: #ff5b57;
+	--danger: #DE4E4B;
   --white: #FFFFFF;
 
 	--shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
